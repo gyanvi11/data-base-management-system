@@ -1,0 +1,9 @@
+create database satya;
+use satya;
+create table satya(id int,name varchar(15));
+insert into satya value(1,'gyanvi'),(2,'rama'),(3,'sri');
+create table vijay(emp_id int,emp_name varchar(20));
+insert into vijay value (12,'mohitha'),(34,'ganga');
+select * from satya;
+select * from vijay
+natural join  satya;
