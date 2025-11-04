@@ -1,0 +1,11 @@
+create database hooii;
+use hoiii;
+create table hlo(name_first varchar(20),age int);
+insert into hlo values('tyu',34),('ert',23);
+savepoint sp1;
+create table hlo(name_first varchar(60),age int);
+insert into hlo values('tre',24),('wer',56);
+savepoint sp2;
+delete from hlo where age =12;
+commit;
+select*from hlo;
