@@ -1,0 +1,14 @@
+create database liyy;
+use liyy;
+create database mobi;
+use mobi;
+create table dat( sid int,name_last varchar(20), id_number int);
+insert into dat values(89,'ram',34),(39,'sita',103);
+create table ride( sid int,name_last varchar(20), id_number int);
+insert into ride values(89,'tarun',103),(39,'sita',7865);
+select*from dat;
+select*from ride;
+select name_last from sant;
+select * from sant where roll_no = '12';
+delete from sant where roll_no = '34';
+update sant  set name_last = 'hari' where roll_no = '12'
