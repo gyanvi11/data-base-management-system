@@ -1,0 +1,21 @@
+create database instal;
+use instal;
+create table instructor(instructor_id int,instructor_name varchar(20),phone int);
+create table courses(course_id int,course_name varchar(30),credits int);
+create table course_instructors(course_id int ,instructor_id int);
+insert into  instructor values(12,'gyanvi',3456),(34,'qt',6789);
+insert into courses values(8,'ase',5);
+insert into course_instuctors values(23,45),(13,14);
+select*from instructor;
+select*from courses;
+select*from course_instructors;
+select 
+c.course_name,i.instructor_name
+from 
+courses c
+join
+course_instructor ci on c.course_id = ci.course_id
+join
+instructor i on ci.instructor_id = i.instructor_id;
+
+
