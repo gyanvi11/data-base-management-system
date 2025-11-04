@@ -1,0 +1,13 @@
+create database  college;
+use college;
+create table student1(student_id int,student_name varchar(50),student_rollon int);
+create table student2(student_phoneno int,student_nickname varchar(50),student_houseno int);
+insert into student1 values(1,'ram',12),(2,'gyanu',23);
+insert into student2 values(2345,'ram',405),(5678,'gyanu',309);
+select * from student1;
+select * from student2;
+create view complexview1 as
+select student1.student_id,student2.student_houseno
+from student1,student2
+where student1.student_name = student2.student_nickname;
+select * from complexview1;
