@@ -1,0 +1,14 @@
+create database TCL;
+use TCL;
+create table TCL(ID INT,NAME VARCHAR(30),PAYMENT INT);
+insert into TCL values(23,'RAM',500); 
+SELECT * FROM TCL;
+START transaction;
+insert into TCL VALUES(64,'GYANU',1222);
+savepoint A;
+insert into TCL VALUES(64,'rama',23444);
+savepoint B;
+insert into TCL VALUES(64,'PRIYANTH',0);
+savepoint C;
+rollback to B;
+COMMIT;
