@@ -1,0 +1,13 @@
+create database liyy;
+use liyy;
+create database mobi;
+use mobi;
+create table dat( sid int,name_last varchar(20), id_number int);
+insert into dat values(89,'ram',34),(39,'sita',103);
+create table ride( sid int,name_last varchar(20), id_number int);
+insert into ride values(89,'tarun',103),(39,'sita',7865);
+select*from dat;
+select*from ride;
+select d.name_last from dat d where exists(select * from ride r where d.sid = r.sid and id_number = 103);
+select d.name_last from dat d where EXISTS(select * from ride r where d.sid=r.sid and 
+r.id_number=103); 
