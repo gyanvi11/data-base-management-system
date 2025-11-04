@@ -1,0 +1,11 @@
+create database hostel;
+use hostel;
+create table hostel(SINO int unique,Name varchar(30) default 'om',age int check(age >= 20),DBMS int NOT NULL,OS int);
+insert into hostel values(1,'gyanvi',20,34,56),(2,'satya',23,56,74),(3,'siri',28,67,34),(4,'ram',24,34,24);
+select*from hostel;
+select max(age) from hostel;
+select count(SINO) from hostel;
+select min(DBMS) from hostel;
+ select avg(os) from hostel;
+ select sum(DBMS) from hostel;
+
